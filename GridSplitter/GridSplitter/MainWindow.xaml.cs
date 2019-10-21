@@ -23,8 +23,7 @@ namespace GridSplitter
     {
         public MainWindow()
         {
-            InitializeComponent();           
-
+            InitializeComponent();
         }
     }
 }
