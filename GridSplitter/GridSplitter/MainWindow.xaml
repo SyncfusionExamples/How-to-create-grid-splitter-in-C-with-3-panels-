@@ -8,20 +8,33 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="Grid Splitter" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="[0,0]" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="[0,1]" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="[1,0]" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="[1,1]" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Text="[1,0]" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <GridSplitter Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="5"/>
-        <GridSplitter Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="5"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+            
+        <Label Content="Panel: Left - Top" 
+               HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center"
+               Grid.Row="0" Grid.Column="0"/>
+        <Label Content="Panel: Left - Bottom" 
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               Grid.Row="1" Grid.Column="0"/>
+        <Label Content="Panel: Right"
+               HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center"
+               Grid.Column="1" Grid.RowSpan="2"/>
+            
+        <GridSplitter HorizontalAlignment="Right"
+                      VerticalAlignment="Stretch" 
+                      Grid.RowSpan="2" Width="5"/>
+        <GridSplitter HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Bottom" 
+                      Height="5"/>
     </Grid>
 </Window>
